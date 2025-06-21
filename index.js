@@ -7,9 +7,18 @@
     }
 })
 
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu");
+    const hamburger = document.getElementById("hamburger");
+    const drawer = document.getElementById("drawerMenu");
+    const overlay = document.getElementById("overlay");
 
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  })
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      drawer.classList.toggle("open");
+      overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", () => {
+      drawer.classList.remove("open");
+      hamburger.classList.remove("active");
+      overlay.classList.remove("show");
+    });
