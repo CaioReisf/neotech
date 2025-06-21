@@ -5,9 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeonTeach</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/logologo.png" type="image/x-icon">
 </head>
 <body>
+    <header id="meuHeader">
+        <a href="index.html"><img src="imagens/logo.png" alt="logo" width="200px"></a>
+         <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+        <div class="menu">
+            <ul>
+                <a href="#">
+                    <li>Inicio</li>
+                </a>
+                <a href="#">
+                    <li>Sobre Nós</li>
+                </a>
+                <a href="#">
+                    <li>Serviços</li>
+                </a>
+                <a href="#">
+                    <li>Contato</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <section class="s1">
+
+        <div class="slogan">
+            <h1>Tecnologia sob medida para o <br>sucesso da sua <br>empresa</h1>
+            <p>Transformamos ideias em soluções digitais <br> que geram resultados reais.</p>
+            <input type="button" value="Solicitar Trabalho" src="#">
+        </div>
+    </section>
+
+    <section class="s2">
+        <div class="sobre">
+            <div class="txtsobre">
+                <h2>QUEM SOMOS :</h2>
+                <p>A NeonTech é uma empresa especializada em soluções digitais corporativas. Atuamos com foco em eficiência, inovação e resultados. Nossa equipe é composta por especialistas em tecnologia, negócios e processos.</p>
+            </div>
+            <div class="equipe">
+                <img src="imagens/equipe.jpg" alt="equipe" width="500px">
+            </div>
+        </div>
+
+        <section class="s3">
+        <h2>O QUE FAZEMOS :</h2>
+
+        <div class="cards">
+            <div class="card1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#3b82f6"><path d="M480-81q-140-35-230-162.5T160-523v-238l320-120 320 120v238q0 152-90 279.5T480-81Zm0-62q115-38 187.5-143.5T740-523v-196l-260-98-260 98v196q0 131 72.5 236.5T480-143Zm0-337Zm-90 160h180q13 0 21.5-8.5T600-350v-140q0-13-8.5-21.5T570-520h-10v-40q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560v40h-10q-13 0-21.5 8.5T360-490v140q0 13 8.5 21.5T390-320Zm40-200v-40q0-20 15-33.5t35-13.5q20 0 35 13.5t15 33.5v40H430Z"/></svg>
+                <h3>Desenvolvimento de Software</h3>
+                <p>Sistemas web e mobile personalizados para sua operação</p>
+
+            </div>
+
+             <div class="card1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#3b82f6"><path d="M120-120v-76l60-60v136h-60Zm165 0v-236l60-60v296h-60Zm165 0v-296l60 61v235h-60Zm165 0v-235l60-60v295h-60Zm165 0v-396l60-60v456h-60ZM120-356v-85l280-278 160 160 280-281v85L560-474 400-634 120-356Z"/></svg>
+                <h3>Consultoria <br>de TI</h3>
+                <p>Diagnóstico e planejamento estratégico em tecnologia.</p>
+
+            </div>
+             <div class="card1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#3b82f6"><path d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm48-60h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Zm44-210q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-130Z"/></svg>
+                <h3>Automação de Processos</h3>
+                <p>Reduza custos e aumente a produtividade com RPA e integração.</p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+  <h2>Entre em contato</h2>
+  <p>Responderemos em até 24h úteis.</p>
+
+  <form action="#" method="post" class="form-neontech">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="text" name="empresa" placeholder="Empresa" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <textarea name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+</section>
+
+  </section>
+
+    <script src="index.js"></script>
+    
     
 </body>
 </html>
