@@ -22,7 +22,13 @@
     
     
 }
+
+html{
+  scroll-behavior: smooth;
+
+}
 body {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,16 +208,26 @@ header div ul a:hover{
     padding: 40px;
     border-radius: 10px;
     height: 300px;
+    transition: all 0.5s ease;
 }
 .s3 .cards .card1 svg{
     background-color: var(--cor-primaria);
     padding: 2px;
     border-radius: 5px;
-    
+  
+
+}
+
+.s3 .cards .card1:hover{
+    transform: translateY(-10px);
+
+
 }
 
 
+
 /* FORMULARIO */
+
 .contato {
   max-width: 600px;
   margin: 100px auto;
@@ -403,5 +419,214 @@ header div ul a:hover{
 
   .menu ul a {
     font-size: 1.2rem;
+  }
+}
+
+
+footer {
+  background-color:#112d4e;
+  color: #ccc;
+  padding: 40px 20px;
+  font-family: var(--font-sora);
+  width: 100%;
+  
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-column h3 {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.footer-column ul,
+.footer-column ul li,
+.footer-column p {
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--white);
+}
+
+.logo-text {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.logo-text span {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* ==========================
+   RESPONSIVO
+   ========================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .s1 .titulo {
+    margin-top: 40%;
+    padding: 0 20px;
+  }
+
+  .s1 .titulo h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: var(--cor-texto);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* Animação do botão ao ativar */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu Lateral */
+.drawer-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background-color: var(--cor-primaria);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: left 0.3s ease;
+  padding: 60px 20px;
+}
+
+.drawer-menu.open {
+  left: 0;
+}
+
+.drawer-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.drawer-menu ul li a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.drawer-menu ul li a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Overlay escuro ao fundo */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.515);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transition: 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mostrar o botão apenas em telas pequenas */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  header nav {
+    display: none; /* Esconde o menu padrão */
   }
 }
